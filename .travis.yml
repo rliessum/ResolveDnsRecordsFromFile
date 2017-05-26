@@ -1,0 +1,14 @@
+language: python
+
+python:
+    - "3.5"
+
+install:
+    - pip install -r dev-requirements.txt
+
+script:
+    - py.test
+    - mypy --silent-imports *.py
+
+after_success:
+    - coveralls
