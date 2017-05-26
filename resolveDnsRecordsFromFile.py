@@ -52,8 +52,6 @@ def read_and_resolve_from_file():
             (','.join(currentRow))
             myResolver = dns.resolver.Resolver()
             myAnswers = myResolver.query((currentWord), 'A')
-            # for outputRecord in myAnswers:
-            #     ('%s\n' % (outputRecord))
             date = datetime.datetime.now().strftime('date-%Y-%m-%d_time-%H-%M-%S')
             fileNameOut = 'dnsoutput'
             with open((fileNameOut)+'_'+(date)+'.csv', 'a', newline='') as csvfile:
