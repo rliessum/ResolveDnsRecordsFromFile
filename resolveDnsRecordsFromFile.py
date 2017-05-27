@@ -9,7 +9,6 @@ from tabulate import tabulate
 FILENAME = "dnsInput.csv"
 
 def main():
-    # Run multiple functions under main
     # read_and_resolve_from_file()
     # read_and_resolve_from_filetable()
     return
