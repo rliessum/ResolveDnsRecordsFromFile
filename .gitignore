@@ -9,6 +9,8 @@ dnsoutput.*
 # Distribution / packaging
 .Python
 env/
+bin/
+include/
 build/
 develop-eggs/
 dist/
