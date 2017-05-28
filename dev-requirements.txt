@@ -1,3 +1,5 @@
+terminaltables==3.1.0
+tabulate==0.7.7
 dnspython==1.15.0
 coveralls==1.1
 pytest-cov==2.2.1
