@@ -3,7 +3,6 @@ import csv
 import os
 import sys
 import datetime
-#import dns.resolver
 import dns.resolver
 import terminaltables
 
