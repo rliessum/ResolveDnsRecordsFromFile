@@ -62,10 +62,13 @@ def read_and_resolve_from_file():
                     csvwriter = csv.writer(csvfile, delimiter=',', quotechar='|',
                                            quoting=csv.QUOTE_MINIMAL)
                     outputRecordList.append(outputRecord)
-                    ('\n'.join(str(p) for p in outputRecordList))
-                    csvwriter.writerow(outputRecordList)
-                    print(outputRecordList)
-
-
+                    #print(outputRecordList)
+                    #print(outputRecord)
+                    #output = outputRecord + outputRecordList
+                    newList = str(outputRecordList).replace('[','').replace(']','').replace('\'','').replace(' <DNS IN A rdata: ','').replace('<','').replace('>','')
+                    ('\n'.join(str(p) for p in newList))
+                    csvwriter.writerow(newList)
+                    #print(outputRecordList[0])
+                    print(newList)
 if __name__ == "__main__":
     main()
