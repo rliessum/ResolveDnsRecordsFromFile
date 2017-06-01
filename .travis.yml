@@ -7,7 +7,6 @@ install:
     - pip install -r dev-requirements.txt
 
 script:
-    - mypy --silent-imports *.py
-
+    - py.test test_resolveDnsRecordsFromFile.py
 after_success:
     - coveralls
