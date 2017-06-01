@@ -1,5 +1,4 @@
-terminaltables==3.1.0
-tabulate==0.7.7
+pyPdf==1.13
 dnspython==1.15.0
 coveralls==1.1
 pytest-xdist==1.14
@@ -9,3 +8,5 @@ pytest==3.1.0
 pytest-cov==2.5.1
 pytest-pylint==0.7.1
 pytest-travis-fold==1.2.0
+codecov==2.0.9
+coverage==4.0.3
