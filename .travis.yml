@@ -7,6 +7,6 @@ install:
     - pip install -r dev-requirements.txt
 
 script:
-    - pytest test_resolveDnsRecordsFromFile.py  
+    - python test_resolveDnsRecordsFromFile.py 
 after_success:
     - coveralls
