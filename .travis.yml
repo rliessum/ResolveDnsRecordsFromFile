@@ -4,7 +4,8 @@ python:
     - "3.6"
 
 install:
-    - pip install -r dev-requirements.txt
+    - pip3 install .
+    - pip3 install -r dev-requirements.txt
 
 script:
     - pytest-3 test_resolveDnsRecordsFromFile.py  
