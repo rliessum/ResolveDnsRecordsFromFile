@@ -7,7 +7,6 @@ install:
     - pip install -r dev-requirements.txt
 
 script:
-    - if [[ $TRAVIS_PYTHON_VERSION == 3.5 || $TRAVIS_PYTHON_VERSION == 3.6 ]]; then py.test;else pytest; fi
     - pytest test_resolveDnsRecordsFromFile.py  
 after_success:
     - coveralls
