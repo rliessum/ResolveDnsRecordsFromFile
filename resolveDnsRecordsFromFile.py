@@ -63,9 +63,11 @@ def read_and_resolve_from_file():
                                            quoting=csv.QUOTE_MINIMAL)
                     outputRecordList.append(outputRecord)
                     newList = str(outputRecordList).replace('[','').replace(']','').replace('\'','').replace(' <DNS IN A rdata: ','').replace('<','').replace('>','')
-                    #csvwriter.writerow(outputRecordList)
                     filter = list(outputRecordList[0]) 
-                    csvwriter.writerow(filter)
                     print(newList)
+            with open((fileNameOut)+'_'+(date)+'.csv', 'a', newline='') as csvfile:
+                csvfile.write("%s\n" % newList)
+            
+
 if __name__ == "__main__":
     main()
