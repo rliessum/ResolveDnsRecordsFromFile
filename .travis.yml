@@ -8,5 +8,6 @@ install:
 
 script:
     - python test_resolveDnsRecordsFromFile.py 
+    - pytest resolveDnsRecordsFromFile.py
 after_success:
     - coveralls
