@@ -1,13 +1,12 @@
 language: python
 
 python:
-    - "3.6"
+    - "3.5.3"
 
 install:
     - pip install -r dev-requirements.txt
 
 script:
     - python test_resolveDnsRecordsFromFile.py 
-    - pytest resolveDnsRecordsFromFile.py
 after_success:
     - coveralls
