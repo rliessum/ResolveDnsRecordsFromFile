@@ -49,7 +49,7 @@ def read_and_resolve_from_file():
             myAnswers = myResolver.query((currentWord))
             date = datetime.datetime.now().strftime('date-%Y-%m-%d_time-%H-%M-%S')
             fileNameOut = 'dnsoutput'
-            with open((fileNameOut)+'_'+(date)+'.csv', 'a', newline='') as csvfile:
+            with open((fileNameOut)+'_'+(date)+'.csv', 'a') as csvfile:
                 csvwriter = csv.writer(csvfile, delimiter=' ', quotechar='|',
                                        quoting=csv.QUOTE_MINIMAL)
                 outputRecordList = list()
@@ -58,14 +58,14 @@ def read_and_resolve_from_file():
                 myResolver = dns.resolver.Resolver()
                 myAnswers = myResolver.query((currentWord), 'a')
             for outputRecord in myAnswers:
-                with open((fileNameOut)+'_'+(date)+'.csv', 'a', newline='') as csvfile:
+                with open((fileNameOut)+'_'+(date)+'.csv', 'a') as csvfile:
                     csvwriter = csv.writer(csvfile, delimiter=',', quotechar='|',
                                            quoting=csv.QUOTE_MINIMAL)
                     outputRecordList.append(outputRecord)
                     newList = str(outputRecordList).replace('[','').replace(']','').replace('\'','').replace(' <DNS IN A rdata: ','').replace('<','').replace('>','')
                     filter = list(outputRecordList[0]) 
                     print(newList)
-            with open((fileNameOut)+'_'+(date)+'.csv', 'a', newline='') as csvfile:
+            with open((fileNameOut)+'_'+(date)+'.csv', 'a') as csvfile:
                 csvfile.write("%s\n" % newList)
             
 
