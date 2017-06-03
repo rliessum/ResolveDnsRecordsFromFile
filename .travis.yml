@@ -5,7 +5,7 @@ python:
 
 install:
     - pip install -r dev-requirements.txt
-
+    - pip install -r requirements.txt
 script:
     - pytest test_resolveDnsRecordsFromFile.py 
     - python test_resolveDnsRecordsFromFile.py 
