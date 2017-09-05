@@ -7,8 +7,12 @@ install:
     - pip install -r dev-requirements.txt
     - pip install -r requirements.txt
 script:
-    - pytest 
-    - python test_resolveDnsRecordsFromFile.py 
+    - pytest
+    - python test_resolveDnsRecordsFromFile.py
     - coverage run --source='./' resolveDnsRecordsFromFile.py test ResolveDnsRecordsFromFile
 after_success:
     - coveralls
+
+notifications:
+webhooks:
+- https://zulip.committheshitoutof.it/api/v1/external/travis?stream=travis&topic=build-status&api_key=4pqjCDUn7HuUHPMmDpQH6QJSy6XhIaBH
