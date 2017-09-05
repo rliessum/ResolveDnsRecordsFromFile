@@ -5,7 +5,6 @@ import sys
 import datetime
 import dns.resolver
 
-''' It ain't pretty but it's play stuff, woop woop! '''
 
 FILENAME = "dnsInput.csv"
 
